@@ -1,0 +1,11 @@
+const path = require('path');
+const dotEnv = require('dotenv')
+
+dotEnv.config()
+
+module.exports= {
+  'config': path.resolve('./api/config', 'config.js'),
+  'models-path': path.resolve('./api/models'),
+  'seeders-path': path.resolve('./api/seeders'),
+  'migrations-path': path.resolve('./api/migrations')
+}
