@@ -11,4 +11,4 @@ routes(app);
 
 const port = process.env.PORT;
 
-app.listen(port,() => console.log(`o servidor esta rodando mais que roda de uno com escada em cima`))
+app.listen(port,() => console.log(`o servidor esta rodando`))

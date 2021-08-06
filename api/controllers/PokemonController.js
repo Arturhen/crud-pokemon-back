@@ -1,6 +1,8 @@
 const database = require("../models/index");
 
 class PokemonController {
+  
+  //lista todos pokemons 
   static async list(req, res) {
     try {
       const allPokemons = await database.Pokemons.findAll();
@@ -10,6 +12,7 @@ class PokemonController {
     }
   }
 
+  //lista pokemons de uma mesma pessoa
   static async findAllOfTheSamePerson(req, res) {
     const parametros = req.params;
     try {
@@ -24,6 +27,7 @@ class PokemonController {
     }
   }
 
+  //adiciona um registro de pokemon no DB
   static async create(req, res) {
     const novoPokemon = req.body;
     try {
@@ -34,6 +38,7 @@ class PokemonController {
     }
   }
 
+  //atualiza o pokemon no DB
   static async update(req, res) {
     const parametros = req.params;
     const dadosCorrigidos = req.body;
@@ -50,6 +55,7 @@ class PokemonController {
     }
   }
 
+  //deleta o registro no DB
   static async delete(req,res) {
     const parametros = req.params;
     try {
